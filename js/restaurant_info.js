@@ -162,15 +162,14 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.setAttribute("id", "name");
-  name.setAttribute("class", "review-name");
   name.innerHTML = review.name;
   li.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
   date.setAttribute("id", "date");
-  date.setAttribute("class", "review-name");
   li.appendChild(date);
+
 
   const rating = document.createElement('p');
   rating.setAttribute("id", "rating");
