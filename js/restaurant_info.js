@@ -140,6 +140,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.tabIndex = '5';
   container.appendChild(title);
 
   if (!reviews) {
@@ -180,6 +181,7 @@ createReviewHTML = (review) => {
   comments.innerHTML = review.comments;
   comments.setAttribute("id", "comment");
   li.appendChild(comments);
+  li.tabIndex = '5';
 
   return li;
 }

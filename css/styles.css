@@ -60,11 +60,19 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
+  font-size: 18pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
+#neighborhoods-select:focus,
+#neighborhoods-select:active, 
+#cuisines-select:focus {
+ color: orange;
+}
+
+
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
@@ -282,10 +290,6 @@ nav h1 a {
   color: #666;
 }
 
-#hours {
-  display: none;
-}
-
 /* Responsive*/
 
 @media only screen and (max-width: 770px) {
@@ -453,12 +457,50 @@ nav h1 a {
     font-size: 14px;
   }
 
+  #neighborhoods-select,
+  #cuisines-select {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    display: block;
+  }
+
+  .filter-options h2 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+
 }
 
 @media only screen and (max-width: 386px) {
 
   .inside #restaurant-container{
-    padding-top: 100%
+    padding-top: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 1159px) {
+  #restaurants-list li {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #restaurants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #restaurants-list li a {
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width:40%;
+    display: block;
   }
 
 }

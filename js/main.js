@@ -165,6 +165,7 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.tabIndex = '4'
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -173,11 +174,13 @@ createRestaurantHTML = (restaurant) => {
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.tabIndex = '4'
   li.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.tabIndex = '4';
   li.append(more)
 
   return li
@@ -209,3 +212,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+
+//Register service worker
+
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('/sw.js').then(function() {
+		console.log('Service Worker: Registered');
+	}).catch(function() {
+		console.log('Registration failed');
+	});
+}
