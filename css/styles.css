@@ -184,15 +184,16 @@ nav h1 a {
 }
 #restaurants-list li a {
   background-color: orange;
-  border-bottom: 3px solid #eee;
   color: #fff;
-  display: inline-block;
-  font-size: 10pt;
-  margin: 15px 0 0;
+  display: block;
+  font-size: 12pt;
+  margin: 15px auto;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
+  width: 50%;
 }
 
 
@@ -291,6 +292,12 @@ nav h1 a {
   color: #666;
 }
 
+
+#hours {
+  color: #f48c42;
+  display: block;
+  text-decoration: underline;
+}
 /* Responsive*/
 
 @media only screen and (max-width: 770px) {
@@ -343,10 +350,7 @@ nav h1 a {
 
 
   #hours {
-    color: #f48c42;
-    display: block;
     font-size: 16px;
-    text-decoration: underline;
   }
 
   #restaurant-hours {
