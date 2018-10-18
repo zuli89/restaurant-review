@@ -100,7 +100,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
-  image.alt = 'photo of ${restaurant.name}';
+  image.alt = `photo of ${restaurant.name}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -223,3 +223,10 @@ document.getElementById("hours").addEventListener("click", function(){
 }
 );
 
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('/sw.js').then(function() {
+		console.log('Service Worker: Registered');
+	}).catch(function() {
+		console.log('Registration failed');
+	});
+}
